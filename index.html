@@ -3,22 +3,21 @@
 <head> 
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <title>Kerem</title>
+ <title>Kerem Ersöz | Portfolio</title>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
- <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
  <link href="style.css" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Assistant:200,300,400,600|Inconsolata&display=swap" rel="stylesheet">
  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark static-top mb-5 shadow">
+<nav class="navbar navbar-expand-lg navbar-dark static-top mb-5 fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,12 +30,12 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="projects.html">>-</a>
+          <a class="nav-link" href="unused.html">*</a>
         </li>
-      </ul>
     </div>
   </div>
 </nav>
+<hr>
 
 
 <!-- Page Content -->
@@ -50,8 +49,11 @@
               <td width="28%"></td>
               <td width="15%"><img alt="face" height="125" width="125" src="face.png"></td>
               <td width="30%">
-                <h1 class="font-weight-light text-light">Welcome!</h1>
-                <p class="font-weight-light text-white-50">My name is Kerem Ersöz. I'm currently studying computer science at University of Minnesota. I like kludging up programs that do fun things. Check out the ones that I feel are important right here.<br>
+                <h1 class="font-weight-light text-light change-font">Welcome!</h1>
+                <p class="font-weight-light text-white-50">My name is Kerem Ersöz. I'm currently studying computer science at University of Minnesota. You're looking at my kludge database. You can also find me on
+                  <a class="link" href="https://www.linkedin.com/in/kerem-ers%C3%B6z-199b3b180/" style="color:#c79500">LinkedIn</a>
+                  and
+                  <a class="link" href="https://angel.co/kerem-ersoz" style="color:#c79500">AngelList</a>.<br>
                 </p>
               </td>
               <td width="30%"></td>
@@ -66,10 +68,10 @@
       <div class="container container-narrow">
       <div class="row">
         <div class="col-md-7" style="text-align: left">
-          <h3 class="font-weight-light text-light">Kekken - Yet Another 2D Fighter Engine</h3>
+          <h3 class="font-weight-light text-light change-font">Kekken - Yet Another 2D Fighter Engine</h3>
           <p class="font-weight-light text-white-50"><font size="3">Kekken is a badly-named 2D fighting game engine I made using SDL2 and its related utilities. I learned a good bit about flow control in games/interactive interfaces and concepts like collision detection using AABBs and ray tracing, rendering and blitting, and the quadtree data structure that allowed for efficient iteration through the screen when searching for collisions. It is extendable with many options for frame data, modeled after other well-known engines like M.A.M.E. and Mugen. </font></p>
-          <a class="btn btn-outline-warning" target="_blank" href="https://github.com/kerem-ersoz/kekken">>>>
-          </a>
+          <button class="btn btn-outline-warning fa fa-github" target="_blank" href="https://github.com/kerem-ersoz/kekken"> GitHub
+          </button>
         </div>
         <div class="col-md-5">
           <a href="#">
@@ -88,10 +90,10 @@
           </a>
         </div>
         <div class="col-md-7" style="text-align: right">
-          <h3 class="font-weight-light text-light">Molecular Solvation Energy Calculator</h3>
+          <h3 class="font-weight-light text-light change-font">Molecular Solvation Energy Calculator</h3>
           <p class="font-weight-light text-white-50"><font size="3">This utility was presented to me as an idea by the UMN faculty Yuk Sham. Based on the Ab Initio methods used by Nobel laureate A. Warshel and his research group, this program calculates the solvation energy of an organic molecule in a solution represented by "grid points". It can read output from the cheminformatics suite Desmond, and produce forcefield output that is compatible with it as well.</font></p>
-           <a class="btn btn-outline-warning" target="_blank" href="https://github.com/kerem-ersoz/solvationcalc">>>>
-          </a>
+           <button class="btn btn-outline-warning fa fa-github" target="_blank" href="https://github.com/kerem-ersoz/solvationcalc"> GitHub
+          </button>
         </div>
       </div>
       <!-- /.row -->
@@ -100,9 +102,9 @@
       <!-- Project Three-->
       <div class="row">
         <div class="col-md-7" style="text-align: left">
-          <h3 class="font-weight-light text-light">Microbiomes Visualized in R</h3>
+          <h3 class="font-weight-light text-light change-font">Microbiomes Visualized in R</h3>
            <p class="font-weight-light text-white-50"><font size="3">A collection of scripts I wrote up that takes raw DNA sample data of bacteria from various places in the body, maps it over its metadata, and classifies it in terms of bacteria. Then, it runs Pairwise Wilcox Tests or ADONIS tests on clusters of data as appropriate, and ggplots them in either boxplots of abundance over samples or principal coordinate analysis plots of differences between samples.</font></p>
-          <a class="btn btn-outline-warning" target="_blank" href="#">Repo coming soon!</a>
+          <button class="btn btn-outline-warning fa" target="_blank" href="#" disabled>Repo coming soon!</button>
         </div>
         <div class="col-md-5">
           <a href="#">

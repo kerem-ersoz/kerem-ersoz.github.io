@@ -22,18 +22,21 @@ body {
   width:65%;
 }
 
+.navbar-left{
+  text-align: left;
+  width:80%;
+  position:absolute;
+  left:0;
+}
+
 .navbar{
   background: transparent;
   font-family: "Assistant", Courier, sans-serif;
   font-size: 150%;
 }
-.change-font-title{
-  font-family: "Assistant", Courier, cursive;
-  color: white;
-}
 
 .change-font{
-  font-family: "Assistant", Courier, monospace;
+  font-family: "Assistant", Courier, sans-serif;
   color: white;
 }
 
@@ -58,6 +61,11 @@ hr {
   background-color: white;
   margin-top: 5%;
   opacity: .5;
+}
+
+.link:hover{
+  text-decoration: initial;
+  opacity:0.5;
 }
 
 
