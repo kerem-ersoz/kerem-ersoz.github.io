@@ -18,6 +18,10 @@ body {
   height: 100%;
 }
 
+.container-narrow{
+  width:65%;
+}
+
 .navbar{
   background: transparent;
   font-family: "Assistant", Courier, sans-serif;
