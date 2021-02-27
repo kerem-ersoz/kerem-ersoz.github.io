@@ -5,7 +5,7 @@
   <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSCI 5607 Project 1</title>
+    <title>CSCI 5607 Project 2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -24,7 +24,7 @@
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark static-top mb-5 fixed-top">
-      <div class="container">
+      <div class="cotainer">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,16 +50,18 @@
       <div class="container text-center change-font">
         <div class="row justify-content-center">
           <div class="col-lg-7 font-weight-light text-light mt-4">
-            <h1>CSCI 5607: Project 1</h1>
+            <h1>CSCI 5607 Project 2:<br>Image Manipulation</h1><br>
             <hr class="line2">
-            <p>In this project, I implemented some simple image manipulation routines. Build the executable with the provided Makefile (on OSX, use the "mac" target for best results), then run the program "square". Clicking inside the square and dragging will move it, clicking and dragging on an edge will scale it, and clicking and dragging a corner will rotate it. The cursor will change when performing these different transformations. Pressing the "r" key will reset the square's position, size and angle to its defaults. Pressing the spacebar will randomize the scale and angle of the square. The program can optionally be run with commandline arguments to specify additional options. The first argument can be used to specify a path to a .ppm file to load. The second and third arguments enable the increased brightness and triangle rendering features respectively. These arguments are just placeholders, so they do not expect any specific strings. Here's an example:
-            <p style="text-align:left;margin-left:2.5in;">
-            <tt>$ make mac </tt>
+            <p>In this project, I implemented additional image manipulation routines. Build the executable with the provided Makefile. To reproduce the result images included below, run the included "run" program. Here's an example: 
+            <p style="text-align:left;margin-left:2.2.5in;">
+            <tt>$ make all </tt>
             <br>
-            <tt>$ ./square goldy.ppm a a </tt></p>
-            The most challenging aspect of this project was figuring out the PGA operations needed to robustly implement rotation. I tried several different approaches and ended up using a more conventional arctangent approach to figure out the angles between displacement vectors. 
+            <tt>$ ./run </tt></p>
+            There were many aspects of this project that I thought were not very straightforward. I had to spend a lot of time trying different things before settling on a good way to convolve a filter onto the image, and I found it quite hard to wrap my head around the Floyd-Steinberg dither, and was only able to come up with a somewhat flawed implementation. I'm confident I got the sampling routines right; though I'm not able to visually see any distinction between the nearest neighbor and bilinear sampling methods. Pixel operations (most of which were implemented in an earlier assignment) were pretty simple. 
+
+            The compiler's address sanitizer would complain about some of my <tt>delete</tt>s so I decided to do what any reasonable programmer would do and I left slight memory leaks in some of the functions. 
             <br><br>
-            <a class="btn btn-outline-warning" href="./5607-p1/Proj1-Resources.zip" download="p1-code.zip">Source code</a>
+            <a class="btn btn-outline-warning" href="./5607-p2/5607-p2.zip" download="p2-code.zip">Source code</a>
             <hr class="line2">
           </div>
         </div>
@@ -73,19 +75,65 @@
         </script>
 
         <a class="pop">
-          <img src="5607-p1/1.png" style="width: 3in; height: 3in;">
+          <img src="5607-p2/1.jpg" style="width: 2.5in; height: 1.5in;">
         </a>
         <a class="pop">
-          <img src="5607-p1/2.png" style="width: 3in; height: 3in;">
+          <img src="5607-p2/2.jpg" style="width: 2.5in; height: 1.5in;">
         </a>
         <a class="pop">
-          <img src="5607-p1/3.png" style="width: 3in; height: 3in;">
+          <img src="5607-p2/3.jpg" style="width: 2.5in; height: 1.5in;">
         </a>
         <a class="pop">
-          <img src="5607-p1/4.png" style="width: 3in; height: 3in;">
+          <img src="5607-p2/4.jpg" style="width: 2.5in; height: 1.5in;">
         </a>
         <a class="pop">
-          <img src="5607-p1/5.png" style="width: 3in; height: 3in;">
+          <img src="5607-p2/5.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/6.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/7.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/8.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/9.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/10.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/11.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/12.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/13.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <div class="container text-center change-font">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 font-weight-light text-light mt-4">
+        <hr class="line2">
+              Three sampling methods compared. Left to right, point, bilinear, Gaussian. All images scaled down by 0.5x0.5. The only difference I could notice was that Gaussian made the image slightly blurry while the other two methods kept it reasonably similar. <br><br></div></div></div>
+        <a class="pop">
+          <img src="5607-p2/14.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/15.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p2/16.jpg" style="width: 2.5in; height: 1.5in;">
+        </a>
+        <div class="container text-center change-font">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 font-weight-light text-light mt-4">
+              <hr class="line2">
+            "Art Contest" Entry: Created by my "fun" filter:<br><br></div></div></div>
+        <a class="pop">
+          <img src="5607-p2/17.jpg" style="width: 2.5in; height: 1.5in;">
         </a>
         <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
