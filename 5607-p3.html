@@ -1,0 +1,93 @@
+<script src="imgpreview.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSCI 5607 Project 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel ="stylesheet" type="text/css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Assistant:200,300,400,600|Inconsolata&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark static-top mb-5 fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto font-weight-light">
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">*</a>
+              <li class="nav-item">
+                <a href="https://www.linkedin.com/in/kerem-ers%C3%B6z-199b3b180/" class="nav-link" target="_blank">LinkedIn</a>
+              </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <hr>
+    <div id="page-content">
+      <div class="container text-center change-font">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 font-weight-light text-light mt-4">
+            <h1>CSCI 5607 Project 3:<br>Ray Tracing</h1><br>
+            <hr class="line2">
+            <p>In this project, I implemented additional image manipulation routines. Build the executable with the provided Makefile. To reproduce the result images included below, run the included "run" program. Here's an example: 
+            <p style="text-align:left;margin-left:2.9in;">
+            <tt>$ make all </tt>
+            <br>
+            <tt>$ ./run </tt></p>
+            There were many aspects of this project that I thought were not very straightforward. I had to spend a lot of time trying different things before settling on a good way to convolve a filter onto the image, and I found it quite hard to wrap my head around the Floyd-Steinberg dither, and was only able to come up with a somewhat flawed implementation. I'm confident I got the sampling routines right; though I'm not able to visually see any distinction between the nearest neighbor and bilinear sampling methods. Pixel operations (most of which were implemented in an earlier assignment) were pretty simple. 
+
+            The compiler's address sanitizer would complain about some of my <tt>delete</tt>s so I decided to do what any reasonable programmer would do and I left slight memory leaks in some of the functions. 
+            <br><br>
+            <a class="btn btn-outline-warning" href="./5607-p2/5607-p2.zip" download="p2-code.zip">Source code</a>
+            <hr class="line2">
+          </div>
+        </div>
+        <script type="text/javascript">
+          $(function() {
+                      $('.pop').on('click', function() {
+                                  $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+                                  $('#imagemodal').modal('show');
+                                });
+                    });
+        </script>
+        <div class="container text-center change-font">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 font-weight-light text-light mt-4">
+        <hr class="line2">
+              Three sampling methods compared. Left to right, point, bilinear, Gaussian. All images scaled down by 0.2x0.2. Gaussian seemed to retain the most detail while introducing some slight blur, while bilinear and point interpolation seemed to introduce some blockiness to details, with bilinear producing the blockier image. <br><br></div></div></div>
+        <div class="container text-center change-font">
+          <div class="row justify-content-center">
+            <div class="col-lg-7 font-weight-light text-light mt-4">
+              <hr class="line2">
+      </div>
+
+      <footer id="sticky-footer" class="py-4 bg-transparent text-white-50">
+        <div class="container text-center change-font">
+          <small>&copy; Kerem Ersöz 2021 </small>
+        </div>
+      </footer>
+  </body>
+</html>
