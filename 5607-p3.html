@@ -50,19 +50,39 @@
       <div class="container text-center change-font">
         <div class="row justify-content-center">
           <div class="col-lg-7 font-weight-light text-light mt-4">
-            <h1>CSCI 5607 Project 3:<br>Ray Tracing</h1><br>
-            <hr class="line2">
+            <h1>CSCI 5607 Project 3A:<br>Ray Tracing Part 1</h1><br>
             <p>In this project, I implemented additional image manipulation routines. Build the executable with the provided Makefile. To reproduce the result images included below, run the included "run" program. Here's an example: 
-            <p style="text-align:left;margin-left:2.9in;">
-            <tt>$ make all </tt>
+            <p style="text-align:left;margin-left:1.7in;">
+            <tt>$ cd src && make ; cd - </tt>
             <br>
-            <tt>$ ./run </tt></p>
+            <tt>$ ./raytrace SphereExamples/spheres2.txt </tt></p>
             There were many aspects of this project that I thought were not very straightforward. I had to spend a lot of time trying different things before settling on a good way to convolve a filter onto the image, and I found it quite hard to wrap my head around the Floyd-Steinberg dither, and was only able to come up with a somewhat flawed implementation. I'm confident I got the sampling routines right; though I'm not able to visually see any distinction between the nearest neighbor and bilinear sampling methods. Pixel operations (most of which were implemented in an earlier assignment) were pretty simple. 
 
-            The compiler's address sanitizer would complain about some of my <tt>delete</tt>s so I decided to do what any reasonable programmer would do and I left slight memory leaks in some of the functions. 
+            The compiler's address sanitizer would complain about some of my <tt>delete</tt>s so I decided to do what any reasonable programmer would do and I left slight memory leaks in some of the functions.
             <br><br>
-            <a class="btn btn-outline-warning" href="./5607-p2/5607-p2.zip" download="p2-code.zip">Source code</a>
+            <a class="btn btn-outline-warning" href="./5607-p3/5607-p3.zip" download="p2-code.zip">Source code</a>
             <hr class="line2">
+            <div class="container text-left row justify-content-center change-font">
+              <dl>
+              <dt>Features implemented:</dt>
+              <dt>Scenes:</dt>
+              <dd>Camera placement, film resolution, aspect ratio</dd>
+              <dd>User specified background colors</dd>
+              <dd>BMP output</dd>
+              <dt>Primitives:</dt>
+              <dd>Spheres</li>
+              <dd>Ambient lights</li>
+              <dd>Point light sources</li>
+              <dd>Shadows (see first, second, third, fifth image)</dd>
+              <dd>Multiple light sources (see third image)</dd>
+              <dt>Sampling:</dt>
+              <dd>Basic sampling</dd>
+              <dt>Materials:</dt>
+              <dd>Color & specularity (Phong Lighting Model)</dd>
+              <dd>Refraction (see green sphere on the left in second image)</dd>
+              <dd>Reflection (see second & third image)</dd>
+              </dl>
+            </div>
           </div>
         </div>
         <script type="text/javascript">
@@ -73,15 +93,42 @@
                                 });
                     });
         </script>
-        <div class="container text-center change-font">
-          <div class="row justify-content-center">
-            <div class="col-lg-7 font-weight-light text-light mt-4">
+
         <hr class="line2">
-              Three sampling methods compared. Left to right, point, bilinear, Gaussian. All images scaled down by 0.2x0.2. Gaussian seemed to retain the most detail while introducing some slight blur, while bilinear and point interpolation seemed to introduce some blockiness to details, with bilinear producing the blockier image. <br><br></div></div></div>
+        <a class="pop">
+          <img src="5607-p3/1.bmp" style="width: 2.2in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p3/2.bmp" style="width: 2.2in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p3/3.bmp" style="width: 2.2in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p3/4.bmp" style="width: 2.2in; height: 1.5in;">
+        </a>
+        <a class="pop">
+          <img src="5607-p3/5.bmp" style="width: 2.2in; height: 1.5in;">
+        </a>
+        
         <div class="container text-center change-font">
           <div class="row justify-content-center">
             <div class="col-lg-7 font-weight-light text-light mt-4">
               <hr class="line2">
+        <a class="pop">
+            "Art Contest" Entry<br> VAPORWAVE BEAR <br> VAPORWAVE BEAR <br> VAPROWAVE BEAR <br><br></div></div></div>
+          <img src="5607-p3/6.bmp" style="width: 2.2in; height: 1.5in;">
+        </a>
+        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-color:#fff0;position:absolute;top:50%;right:47%">
+              <div class="modal-body" style="overflow:visible">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <img src="" class="imagepreview" style="width: 200%;" >
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer id="sticky-footer" class="py-4 bg-transparent text-white-50">
