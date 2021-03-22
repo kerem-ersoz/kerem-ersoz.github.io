@@ -2,138 +2,226 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSCI 5607 Project 3</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel ="stylesheet" type="text/css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Assistant:200,300,400,600|Inconsolata&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark static-top mb-5 fixed-top">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto font-weight-light">
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSCI 5607 Project 3</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel ="stylesheet" type="text/css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Assistant:200,300,400,600|Inconsolata&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark static-top mb-5 fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto font-weight-light">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">*</a>
             <li class="nav-item">
-              <a class="nav-link" href="/index">Home
-                <span class="sr-only">(current)</span>
-              </a>
+              <a href="https://www.linkedin.com/in/kerem-ers%C3%B6z-199b3b180/" class="nav-link" target="_blank">LinkedIn</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">*</a>
-              <li class="nav-item">
-                <a href="https://www.linkedin.com/in/kerem-ers%C3%B6z-199b3b180/" class="nav-link" target="_blank">LinkedIn</a>
-              </li>
-            </li>
-          </ul>
-        </div>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <hr>
-    <div id="page-content">
-      <div class="container text-center change-font">
-        <div class="row justify-content-center">
-          <div class="col-lg-7 font-weight-light text-light mt-4">
-            <h1>CSCI 5607 Project 3A:<br>Ray Tracing Part 1</h1><br>
-            <p>In this project, I implemented additional image manipulation routines. Build the executable with the provided Makefile. To reproduce the result images included below, run the included "run" program. Here's an example: 
+    </div>
+  </nav>
+  <hr>
+  <div id="page-content">
+    <div class="container text-center change-font">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 font-weight-light text-light mt-4">
+          <h1>CSCI 5607 Project 3A:<br>Ray Tracing Part 1</h1><br>
+          <p>In this project, I put together my initial raytracer. Build the executable with the provided Makefile. To reproduce the result images included below, run the included "run" program. Here's an example: 
             <p style="text-align:left;margin-left:1.7in;">
-            <tt>$ cd src && make ; cd - </tt>
-            <br>
-            <tt>$ ./raytrace SphereExamples/spheres2.txt </tt></p>
-            I found the fact that this project had no "starter code" very jarring coming from previous assignments that had a lot of code to set me off. I regret not checking out the files beforehand because I had to devote a lot of time to miscellaneous setup code adapting code from the Homework, which really added to the time crunch. Implementation wise, I had a some issues with speckling or "acne" in my initial implementations for shadows and reflections. Just when I thought I ran through the entire program looking for the culprit, I saw a thread on the Slack channel that mentioned something to the effect of adding an <tt>if</tt> statement to discard ray collisions that occurred in very short distances. This was a lifesaver and put me back on track. <br><br>
+              <tt>$ cd src && make ; cd - </tt>
+              <br>
+              <tt>$ ./raytrace SphereExamples/spheres2.txt </tt></p>
+              I found the fact that this project had no "starter code" very jarring coming from previous assignments that had a lot of code to set me off. I regret not checking out the files beforehand because I had to devote a lot of time to miscellaneous setup code adapting code from the Homework, which really added to the time crunch. Implementation wise, I had a some issues with speckling or "acne" in my initial implementations for shadows and reflections. Just when I thought I ran through the entire program looking for the culprit, I saw a thread on the Slack channel that mentioned something to the effect of adding an <tt>if</tt> statement to discard ray collisions that occurred in very short distances. This was a lifesaver and put me back on track. <br><br>
 
-            In my implementation, I encapsulated most concepts in unique <tt>struct</tt>s or <tt>class</tt>es, which really slowed down my development in the beginning but made my life much easier when it came to debugging or refactoring. I also borrowed a tree-type data structure and used it as a dependency in my <tt>ray</tt>s to keep track of collisions in a scene. I was really amazed at how large of an optimization this was; it basically meant that if there were no rays intersecting with an object, it would not be rendered. This really came in handy when I had an issue with my camera not setting the up direction correctly after figuring out the right direction by taking the cross product of the inferred right and forward directions. I had used a similar data structure (quadtree of axis-aligned bounding boxes) in a personal project before to detect hitbox/hurtbox collisions, so I had some familiarity with the concepts. 
-            <br><br>
-            <a class="btn btn-outline-warning" href="./5607-p3/5607-p3.zip" download="p2-code.zip">Source code</a>
-            <hr class="line2">
-            <div class="container text-left row justify-content-center change-font">
-              <dl>
-              <dt>Features implemented:</dt>
-              <dt>Scenes:</dt>
-              <dd>Camera placement, film resolution, aspect ratio</dd>
-              <dd>User specified background colors</dd>
-              <dd>BMP output</dd>
-              <dt>Primitives:</dt>
-              <dd>Spheres</li>
-              <dd>Ambient lights</li>
-              <dd>Point light sources</li>
-              <dd>Shadows (see first, second, third, fifth image)</dd>
-              <dd>Multiple light sources (see third image)</dd>
-              <dt>Sampling:</dt>
-              <dd>Basic sampling</dd>
-              <dt>Materials:</dt>
-              <dd>Color & specularity (Phong Lighting Model)</dd>
-              <dd>Reflection (see second & third image)</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript">
-          $(function() {
-                      $('.pop').on('click', function() {
+              In my implementation, I encapsulated most concepts in unique <tt>struct</tt>s or <tt>class</tt>es, which really slowed down my development in the beginning but made my life much easier when it came to debugging or refactoring. I also borrowed a tree-type data structure and used it as a dependency in my <tt>ray</tt>s to keep track of collisions in a scene. I was really amazed at how large of an optimization this was; it basically meant that if there were no rays intersecting with an object, it would not be rendered. This really came in handy when I had an issue with my camera not setting the up direction correctly after figuring out the right direction by taking the cross product of the inferred right and forward directions. I had used a similar data structure (quadtree of axis-aligned bounding boxes) in a personal project before to detect hitbox/hurtbox collisions, so I had some familiarity with the concept. 
+              <br><br>
+              <a class="btn btn-outline-warning" href="./5607-p3/5607-p3.zip" download="p2-code.zip">Source code</a>
+              <hr class="line2">
+              <div class="container text-left row justify-content-center change-font">
+                <dl>
+                  <dt>Features implemented:</dt>
+                  <dt>Scenes:</dt>
+                  <dd>Camera placement, film resolution, aspect ratio</dd>
+                  <dd>User specified background colors</dd>
+                  <dd>BMP output</dd>
+                  <dt>Primitives:</dt>
+                  <dd>Spheres</li>
+                    <dd>Ambient lights</li>
+                      <dd>Point light sources</li>
+                        <dd>Shadows (see first, second, third, fifth image)</dd>
+                        <dd>Multiple light sources (see third image)</dd>
+                        <dt>Sampling:</dt>
+                        <dd>Basic sampling</dd>
+                        <dt>Materials:</dt>
+                        <dd>Ambient, specular color (Phong Lighting Model)</dd>
+                        <dd>Diffuse color</dd>
+                        <dd>Reflection (see second & third image)</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/javascript">
+                  $(function() {
+                    $('.pop').on('click', function() {
+                      $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+                      $('#imagemodal').modal('show');
+                    });
+                  });
+                </script>
+
+                <hr class="line2">
+                <a class="pop">
+                  <img src="5607-p3/1.bmp" style="width: 2.2in; height: 1.5in;">
+                </a>
+                <a class="pop">
+                  <img src="5607-p3/2.bmp" style="width: 2.2in; height: 1.5in;">
+                </a>
+                <a class="pop">
+                  <img src="5607-p3/3.bmp" style="width: 2.2in; height: 1.5in;">
+                </a>
+                <a class="pop">
+                  <img src="5607-p3/4.bmp" style="width: 2.2in; height: 1.5in;">
+                </a>
+                <a class="pop">
+                  <img src="5607-p3/5.bmp" style="width: 2.2in; height: 1.5in;">
+                </a>
+
+                <div class="container text-center change-font">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-7 font-weight-light text-light mt-4">
+                      <hr class="line2">
+                      <a class="pop">
+                        "Art Contest" Entry<br> VAPORWAVE BEAR <br> VAPORWAVE BEAR <br> VAPROWAVE BEAR <br><br></div></div></div>
+                        <img src="5607-p3/6.bmp" style="width: 2.2in; height: 1.5in;">
+                      </a>
+                      <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content" style="background-color:#fff0;position:absolute;top:50%;right:47%">
+                            <div class="modal-body" style="overflow:visible">
+                              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                              <img src="" class="imagepreview" style="width: 200%;" >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="page-content">
+                      <div class="container text-center change-font">
+                        <div class="row justify-content-center">
+                          <div class="col-lg-7 font-weight-light text-light mt-4">
+                            <h1>CSCI 5607 Project 3B:<br>Ray Tracing Part 2</h1><br>
+                            I extended my previous raytracer in this part of the project by adding refraction and directional light features. Additionally, I timed my code to with my tree implementation enabled and disabled respectively. The difference was really quite great. I wasn't able to implement triangles due to some other very pressing commitments. This kept me from being able to render some truly impressive scenes, but I was still able to see the effects on my scenes. One issue I faced in this phase of the project was using the normal of the exiting ray incorrectly, giving me almost fully translucent spheres with solid outlines. Compilation steps remain the same as above. Here's an example: 
+                            <p style="text-align:left;margin-left:1.7in;">
+                              <tt>$ cd src && make ; cd - </tt>
+                              <br>
+                              <tt>$ ./raytrace SphereExamples/spheres2.txt </tt></p>
+                              <a class="btn btn-outline-warning" href="./5607-p3/5607-p3b.zip" download="p2-code.zip">Source code</a>
+                              <hr class="line2">
+                              <div class="container text-left row justify-content-center change-font">
+                                <dl>
+                                  <dt>New Features implemented:</dt>
+                                  <dt>Primitives:</dt>
+                                  <dd>Directional lights</dd>
+                                  <dd>Recursion to a bounded depth</li>
+                                    <dt>Materials:</dt>
+                                    <dd>Refraction</dd>
+                                    <dt>Miscellaneous:</dt>
+                                    <dd>Parallelized the two main loops in my program with OpenMP</dd>
+                                    <dd>Implemented a BVH-like data structure</dd>
+                                  </dl>
+                                </div>
+                              </div>
+                            </div>
+                            <script type="text/javascript">
+                              $(function() {
+                                $('.pop').on('click', function() {
                                   $('.imagepreview').attr('src', $(this).find('img').attr('src'));
                                   $('#imagemodal').modal('show');
                                 });
-                    });
-        </script>
+                              });
+                            </script>
 
-        <hr class="line2">
-        <a class="pop">
-          <img src="5607-p3/1.bmp" style="width: 2.2in; height: 1.5in;">
-        </a>
-        <a class="pop">
-          <img src="5607-p3/2.bmp" style="width: 2.2in; height: 1.5in;">
-        </a>
-        <a class="pop">
-          <img src="5607-p3/3.bmp" style="width: 2.2in; height: 1.5in;">
-        </a>
-        <a class="pop">
-          <img src="5607-p3/4.bmp" style="width: 2.2in; height: 1.5in;">
-        </a>
-        <a class="pop">
-          <img src="5607-p3/5.bmp" style="width: 2.2in; height: 1.5in;">
-        </a>
-        
-        <div class="container text-center change-font">
-          <div class="row justify-content-center">
-            <div class="col-lg-7 font-weight-light text-light mt-4">
-              <hr class="line2">
-        <a class="pop">
-            "Art Contest" Entry<br> VAPORWAVE BEAR <br> VAPORWAVE BEAR <br> VAPROWAVE BEAR <br><br></div></div></div>
-          <img src="5607-p3/6.bmp" style="width: 2.2in; height: 1.5in;">
-        </a>
-        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content" style="background-color:#fff0;position:absolute;top:50%;right:47%">
-              <div class="modal-body" style="overflow:visible">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <img src="" class="imagepreview" style="width: 200%;" >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <footer id="sticky-footer" class="py-4 bg-transparent text-white-50">
-        <div class="container text-center change-font">
-          <small>&copy; Kerem Ersöz 2021 </small>
-        </div>
-      </footer>
-  </body>
-</html>
+                            <hr class="line2">
+                            <a class="pop">
+                              <img src="5607-p3/7.bmp" style="width: 2.2in; height: 1.5in;">
+                            </a>
+                            <a class="pop">
+                              <img src="5607-p3/8.bmp" style="width: 2.2in; height: 1.5in;">
+                            </a><div class="container text-center change-font">
+                              <div class="row justify-content-center">
+                                <div class="col-lg-7 font-weight-light text-light mt-4">
+                                  <hr class="line2">
+                                  Parallelism and ObjTree Speedup Table<br><br>
+                                  In hindsight, I probably should have tried to use more cores on a cse machine with more physical cores to achieve even better performance. If I had been able to render the more complex scenes using triangles, I probably would have seen pretty crazy speedups thanks to AABBs. However, even the speedups in the relatively more complex sphere scenes spheres2 and sunset are significant.<br><br>
+                                  <a class="pop">
+                                    <img src="5607-p3/13.jpg" style="width: 3in; height: 1.5in;">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="container text-center change-font">
+                              <div class="row justify-content-center">
+                                <div class="col-lg-7 font-weight-light text-light mt-4">
+                                  <hr class="line2">
+                                  Art Contest Entry - A Sunset:<br><br>
+                                  Left image has a max_depth of 2, right has a max_depth of 10. As recursion depth increased, the program was able to better the more overexposed areas like the "sun" which I placed a directional light source in. The increased recursion depth also changes the color of the clear sphere in front of the larger pink sphere on the right (left image w/ max_depth=2, right with max_depth=10). <br><br>
+                                  <a class="pop">
+                                    <img src="5607-p3/9.bmp" style="width: 2.2in; height: 1.5in;">
+                                  </a>
+                                  <a class="pop">
+                                    <img src="5607-p3/10.bmp" style="width: 2.2in; height: 1.5in;">
+                                  </a><br>
+                                  <a class="pop">
+                                    <img src="5607-p3/8.bmp" style="width: 2.2in; height: 1.5in;">
+                                  </a>
+                                  <a class="pop">
+                                    <img src="5607-p3/11.bmp" style="width: 2.2in; height: 1.5in;">
+                                  </a><br>
+                                </div>
+                              </div>
+                            </div>
+                            <hr class="line2">
+                            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content" style="background-color:#fff0;position:absolute;top:50%;right:47%">
+                                  <div class="modal-body" style="overflow:visible">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <img src="" class="imagepreview" style="width: 200%;" >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <footer id="sticky-footer" class="py-4 bg-transparent text-white-50">
+                            <div class="container text-center change-font">
+                              <small>&copy; Kerem Ersöz 2021 </small>
+                            </div>
+                          </footer>
+                        </body>
+                        </html>
