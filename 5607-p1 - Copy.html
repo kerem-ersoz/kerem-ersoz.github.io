@@ -5,7 +5,7 @@
   <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSCI 5607 Project 4</title>
+    <title>CSCI 5607 Project 1</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -50,35 +50,17 @@
       <div class="container text-center change-font">
         <div class="row justify-content-center">
           <div class="col-lg-7 font-weight-light text-light mt-4">
-            <h1>CSCI 5607 Project 4:<br>Real Time Game Programming</h1><br>
-            <p>In this project, I implemented a maze game. The game is a first person game involving doors that can be unlocked using keys scattered throughout the map.
-            <p style="text-align:left;margin-left:1.7in;">
-            <tt>$ make </tt>
-            <br>
-            <tt>$ ./play maps/2.txt </tt></p>
-            In the game, the player is trapped in a dungeon in a maze with a number of locked doors. The player must find the magical teapots around the dungeon to unlock these doors. At one end of the dungeon is a magic china teapot that contains a genie. The goal of the game is to unlock all doors and reach the magic china teapot. Implementation wise, I based most of my approach on Prof Guy's solution posted in Lua. I had a hard time loading model verts and getting them to render properly, where my walls would get cut into slices would almost look like window blinds. I found that this was due to a calculation error. Overall though, I found that the starter code posted by Prof Guy and the wealth of OpenGL documentation online made things relatively straightforward to implement. Ultimately, there are a few minor things that I was unable to address: 1. I animated the opening of doors based on a tick value after the program has been started, meaning that after a while of running the game, door animations would appear to be instant. Secondly, I was unable to position the diffuse light source such that there wouldn't be large shadows in the map. I believe these were fairly minor though.  
-            <br><br>
-            <a class="btn btn-outline-warning" href="./5607-p4/5607-p4.zip" download="p2-code.zip">Source code</a>
+            <h1>CSCI 5607: Project 1</h1>
             <hr class="line2">
-            <div class="container text-left row justify-content-center change-font">
-              <dl>
-              <dt>Features implemented:</dt>
-              <dt>Requirements:</dt>
-              <dd>Continuous movement</dd>
-              <dd>Walls & doors</dd>
-              <dd>Keys</dd>
-              <dd>User Input</dd>
-              <dd>Collision Detection</dd>
-              <dd>Floors</dd>
-              <dd>Lighting</dd>
-              <dd>New Maps</dd>
-              <dt>Additional Features:</dt>
-              <dd>Integrated keyboard and mouse control</dd>
-              <dd>Make a video of yourself playing</dd>
-              <dd>Two artistic/well-composed screenshots from your game</li>
-              <dd>Animate the process of doors opening after they are unlocked</dd>
-              </dl>
-            </div>
+            <p>In this project, I implemented some simple image manipulation routines. Build the executable with the provided Makefile (on OSX, use the "mac" target for best results), then run the program "square". Clicking inside the square and dragging will move it, clicking and dragging on an edge will scale it, and clicking and dragging a corner will rotate it. The cursor will change when performing these different transformations. Pressing the "r" key will reset the square's position, size and angle to its defaults. Pressing the spacebar will randomize the scale and angle of the square. The program can optionally be run with commandline arguments to specify additional options. The first argument can be used to specify a path to a .ppm file to load. The second and third arguments enable the increased brightness and triangle rendering features respectively. These arguments are just placeholders, so they do not expect any specific strings. Here's an example:
+            <p style="text-align:left;margin-left:2.5in;">
+            <tt>$ make mac </tt>
+            <br>
+            <tt>$ ./square goldy.ppm a a </tt></p>
+            The most challenging aspect of this project was figuring out the PGA operations needed to robustly implement rotation. I tried several different approaches and ended up using a more conventional arctangent approach to figure out the angles between displacement vectors. 
+            <br><br>
+            <a class="btn btn-outline-warning" href="./5607-p1/Proj1-Resources.zip" download="p1-code.zip">Source code</a>
+            <hr class="line2">
           </div>
         </div>
         <script type="text/javascript">
@@ -90,38 +72,20 @@
                     });
         </script>
 
-        <br>
-        <hr class="line2">
         <a class="pop">
-          <img src="5607-p4/3.png" style="width: 2.2in; height: 1.5in;">
+          <img src="5607-p1/1.png" style="width: 3in; height: 3in;">
         </a>
         <a class="pop">
-          <img src="5607-p4/4.png" style="width: 2.2in; height: 1.5in;">
+          <img src="5607-p1/2.png" style="width: 3in; height: 3in;">
         </a>
         <a class="pop">
-          <img src="5607-p4/5.png" style="width: 2.2in; height: 1.5in;">
-        </a>
-        <br>
-        <a class="pop">
-          <img src="5607-p4/6.png" style="width: 2.2in; height: 1.5in;">
+          <img src="5607-p1/3.png" style="width: 3in; height: 3in;">
         </a>
         <a class="pop">
-          <img src="5607-p4/7.png" style="width: 2.2in; height: 1.5in;">
+          <img src="5607-p1/4.png" style="width: 3in; height: 3in;">
         </a>
         <a class="pop">
-          <img src="5607-p4/8.png" style="width: 2.2in; height: 1.5in;">
-        </a>
-        
-        <div class="container text-center change-font">
-          <div class="row justify-content-center">
-            <div class="col-lg-7 font-weight-light text-light mt-4">
-              <hr class="line2">
-        <a class="pop">
-            Misc Screenshots/Art Contest Submissions<br> </div></div></div>
-          <img src="5607-p4/1.png" style="width: 2.2in; height: 1.5in;">
-        </a>
-        <a class="pop">
-          <img src="5607-p4/2.png" style="width: 2.2in; height: 1.5in;">
+          <img src="5607-p1/5.png" style="width: 3in; height: 3in;">
         </a>
         <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -133,11 +97,6 @@
             </div>
           </div>
         </div>
-        <hr class="line2">
-        Video demos:<br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/U6NdhLAyS-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/NUyUajPF1l4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <footer id="sticky-footer" class="py-4 bg-transparent text-white-50">
