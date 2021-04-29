@@ -50,15 +50,16 @@
       <div class="container text-center change-font">
         <div class="row justify-content-center">
           <div class="col-lg-7 font-weight-light text-light mt-4">
-            <h1>CSCI 5607 Final Project:<br>Real Time Game Programming</h1><br>
+            <h1>CSCI 5607 Final Project:<br>Real Time Game Programming</h1>
+            <hr class="line2">
             <p>In this project, I plan to extend my maze game engine into something that resembles the Megami Tensei games from the late 80s. It will remain a first-person game, and I will extend it by adding battles and other encounters to the game. There will be bosses that the user will have to defeat to beat the game. I am working alone on this project. I have not started yet, although I do have a good idea of what it will look like when I'm done. I think the largest obstacle in implementing this idea will be parsing and loading arbitrary models into the game. If I'm able to successfully implement that, programming the logic and producing textures should not be too hard.  
-Below are some screenshots from "Shin Megami Tensei if..." (1994) to give you an idea of what I'm going for.
+            Below are some screenshots from "Shin Megami Tensei if..." (1994) to give you an idea of what I'm going for.
             <br><br>
-
-
-Note: this game uses 2d sprites, but I will be reusing my game engine from P4 so my final project will have 3d artifacts. 
-        <br>
-                <script type="text/javascript">
+            Note: this game uses 2d sprites, but I will be reusing my game engine from P4 so my final project will have 3d artifacts. 
+            <hr class="line2">
+          </div>
+        </div>
+        <script type="text/javascript">
           $(function() {
                       $('.pop').on('click', function() {
                                   $('.imagepreview').attr('src', $(this).find('img').attr('src'));
@@ -66,18 +67,28 @@ Note: this game uses 2d sprites, but I will be reusing my game engine from P4 so
                                 });
                     });
         </script>
-<hr class="line2">
+
         <a class="pop">
-          <img src="5607-p5/1.jpg" style="width: 2.2in; height: 1.5in;">
+          <img src="5607-p5/1.jpg" style="width: 2in; height: 2in;">
         </a>
         <a class="pop">
-          <img src="5607-p5/2.jpg" style="width: 2.2in; height: 1.5in;">
-        </a>
+          <img src="5607-p5/2.jpg" style="width: 2in; height: 2in;">
+        </a><br>
         <a class="pop">
-          <img src="5607-p5/3.jpg" style="width: 2.2in; height: 1.5in;">
+          <img src="5607-p5/3.jpg" style="width: 2in; height: 2in;">
         </a>
-        <br>
-        
+        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-color:#fff0;position:absolute;top:50%;right:47%">
+              <div class="modal-body" style="overflow:visible">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <img src="" class="imagepreview" style="width: 200%;" >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <footer id="sticky-footer" class="py-4 bg-transparent text-white-50">
         <div class="container text-center change-font">
           <small>&copy; Kerem Ersöz 2021 </small>
